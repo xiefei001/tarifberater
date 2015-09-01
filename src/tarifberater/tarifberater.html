@@ -1,0 +1,5 @@
+<div>
+    <input type="number" ng-model="amount" aria-label="amount"> <br>
+    default currency symbol (€): <span id="currency-default">Ca {{amount | currency: '&#8364;' : 0}}</span><br>
+    default currency symbol (€): <span id="currency-euro">{{'Ca ' + (amount | number:2) + '&#8364;'}}</span><br>
+</div>

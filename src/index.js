@@ -3,7 +3,8 @@
  */
 'use strict';
 
-angular.module('tarifBerater', ['ngRoute', 'ngCookies', 'ui.bootstrap'])
-    .config('$routeProvider', function($routeProvider){
+angular.module('tarifBerater', ['ngRoute', 'ngCookies', 'ui.bootstrap',
+    'tarifBerater.inputview'])
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/tarifberater'});
-    });
+    }]);
