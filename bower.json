@@ -1,0 +1,22 @@
+{
+  "name": "tarifberater",
+  "version": "1.0.0",
+  "authors": [
+    "xiefei001 <xiefei001@hotmail.com>"
+  ],
+  "description": "Tarif Berater fuer ISS Neu Konzeption",
+  "license": "MIT",
+  "ignore": ["bower_components"],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-cookies": "~1.4.0",
+    "angular-bootstrap": "~0.13.3",
+    "bootstrap":"~3.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.0",
+    "karma-jasmine": "~0.3.6",
+    "jasmine-core":"~2.3.4"
+  }
+}
