@@ -5,11 +5,19 @@
 
 angular.module('tarifBerater.inputview', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
+        console.log("routeprovider for inputview instantiated");
         $routeProvider.when('/tarifberater', {
-            templateUrl: 'tarifberater/tarifberater.html',
-            controller: 'inputviewcontroller'
+            templateUrl: 'tarifberater/tarifberater.html'
+            //controller: 'BaseController'
         });
     }])
-    .controller('inputviewcontroller', function () {
-
+    .controller('BaseController', function () {
+        console.log("base controller instantiated");
+        this.headline = "Basis Controller";
+    }).controller("AnotherController", function () {
+        console.log("another controller instantiated");
+        this.headline ="Another Controller";
+    }).controller('YetAnotherController', function($scope) {
+        this.headline = "Instanz Headline";
+        $scope.headline = "Scope Headline";
     });
