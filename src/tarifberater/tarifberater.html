@@ -18,3 +18,31 @@
 <div ng-controller="YetAnotherController as yac">
     <h4>{{ yac.headline }} / {{ headline }}</h4>
 </div>
+
+<form ng-controller="formController as formCtrl">
+    <input type="text"  ng-model="formCtrl.username" placeholder="Benutzername"/>
+    <input type="text"  ng-model="formCtrl.email" placeholder="E-Mail"/>
+    <button ng-click="formCtrl.addUser()">Benutzer hinzufügen</button>
+</form>
+<hr/>
+<ul ng-controller="userListController as userListCtrl">
+    <li ng-repeat="user in userListCtrl.users() track by user.username">
+        {{ user.username }}
+        ({{ user.email }})
+    </li>
+</ul>
+
+
+<div ng-controller="tempController as tempCtrl" class="container">
+    <form id="zipCodeForm"  ng-submit="tempCtrl.submit()">
+        <input id="zipCodeInput" ng-model="tempCtrl.text" name="text" type="text"> </input>
+        <input id="zipSubmit" type="submit" value="Submit" class="btn btn-large btn-primary">
+
+    </form>
+
+    <div>
+        <h4 ng-repeat='item in tempCtrl.temperatures'>
+            Zip code is {{item.zip}} and temperature is {{item.temp}}
+        </h4>
+    </div>
+</div>
