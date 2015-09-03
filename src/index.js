@@ -6,5 +6,6 @@
 angular.module('tarifBerater', ['ngRoute', 'ngCookies', 'ui.bootstrap',
     'tarifBerater.inputview'])
     .config(['$routeProvider', function ($routeProvider) {
+        console.log("root provider instantiated");
         $routeProvider.otherwise({redirectTo: '/tarifberater'});
     }]);

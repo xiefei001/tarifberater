@@ -3,3 +3,18 @@
     default currency symbol (€): <span id="currency-default">Ca {{amount | currency: '&#8364;' : 0}}</span><br>
     default currency symbol (€): <span id="currency-euro">{{'Ca ' + (amount | number:2) + '&#8364;'}}</span><br>
 </div>
+
+
+<div ng-controller="BaseController as first">
+    <h4>{{ first.headline }}</h4>
+    <input type="text" ng-model="first.headline">
+    <div ng-controller="BaseController as second">
+        <h5>{{ second.headline }}</h5>
+        <input type="text" ng-model="second.headline">
+        <h4>first.headlin: {{ first.headline }}</h4>
+    </div>
+</div>
+
+<div ng-controller="YetAnotherController as yac">
+    <h4>{{ yac.headline }} / {{ headline }}</h4>
+</div>
