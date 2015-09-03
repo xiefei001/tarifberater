@@ -11,6 +11,12 @@ angular.module('tarifBerater.inputview', ['ngRoute'])
             //controller: 'BaseController'
         });
     }])
+
+
+    // Purpose of controller: Binding data to view.
+    // Controller shouldn't hold model state.
+    // Controller accept input and converts it to command for model or view.
+    
     .factory("userFactory", function(){
         var privateUserList = [];
         return {
